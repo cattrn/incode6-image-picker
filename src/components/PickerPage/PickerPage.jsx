@@ -15,7 +15,8 @@ const PickerPage = ({savedPhotos, setSavedPhotos}) => {
 
     const getRandomPhoto = async () => {
       try {
-        const response = await axios.get('https://api.unsplash.com/photos/random?client_id=3VNjP1u1CkszxrEkvQbye2Xeekq080zkMM6EafDF-Ug')
+        // your unsplash access key goes at the end here
+        const response = await axios.get('https://api.unsplash.com/photos/random?client_id=')
         console.log('Hello from axios')
         setPhoto(response.data.urls.regular ? response.data.urls.regular : 'https://i.picsum.photos/id/237/536/354.jpg?hmac=i0yVXW1ORpyCZpQ-CknuyV-jbtU7_x9EBQVhvT5aRr0')
       } catch (error) {
